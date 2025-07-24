@@ -31,65 +31,69 @@
         </div>
     </header>
 
-    <!-- Основной контент с боковыми панелями -->
-    <div class="content-wrapper">
-        <!-- Центральный контент -->
-        <main class="main">
-            <!-- Герой-секция -->
-            <section class="hero">
-                <div class="container">
-                    <h2>Начните обучение сегодня</h2>
-                    <p>Доступные курсы от лучших преподавателей</p>
-                    <a href="#courses" class="btn btn-large">Записаться сейчас</a>
-                </div>
-            </section>
+    <!-- Основной контент -->
+    <main class="main">
+        <!-- Кнопка для открытия боковой панели на мобильных -->
+        <button class="sidebar-toggle-btn">☰ Категории</button>
+        
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container">
+                <h2>Начните обучение сегодня</h2>
+                <p>Доступные курсы от лучших преподавателей</p>
+                <a href="#courses" class="btn btn-large">Записаться сейчас</a>
+            </div>
+        </section>
 
-            <!-- Популярные курсы -->
-            <section id="courses" class="courses">
-                <div class="container">
-                    <h2>Популярные курсы</h2>
-                    <div class="course-grid">
-                        <!-- Курс 1 -->
-                        <div class="course-card">
-                            <h3>Веб-разработка</h3>
-                            <p>Полный курс по созданию современных веб-сайтов</p>
-                            <span class="price">Бесценно</span>
-                        </div>
-                        <!-- Курс 2 -->
-                        <div class="course-card">
-                            <h3>Data Science</h3>
-                            <p>Основы анализа данных и машинного обучения</p>
-                            <span class="price">Не изучено автором</span>
-                        </div>
-                        <!-- Курс 3 -->
-                        <div class="course-card">
-                            <h3>UX/UI Дизайн</h3>
-                            <p>Создание удобных и красивых интерфейсов</p>
-                            <span class="price">Дорого</span>
-                        </div>
+        <!-- Популярные курсы -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>Популярные курсы</h2>
+                <div class="course-grid">
+                    <!-- Курс 1 -->
+                    <div class="course-card">
+                        <h3>Веб-разработка</h3>
+                        <p>Полный курс по созданию современных веб-сайтов</p>
+                        <span class="price">Бесценно</span>
+                    </div>
+                    <!-- Курс 2 -->
+                    <div class="course-card">
+                        <h3>Data Science</h3>
+                        <p>Основы анализа данных и машинного обучения</p>
+                        <span class="price">Не изучено автором</span>
+                    </div>
+                    <!-- Курс 3 -->
+                    <div class="course-card">
+                        <h3>UX/UI Дизайн</h3>
+                        <p>Создание удобных и красивых интерфейсов</p>
+                        <span class="price">Дорого</span>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <!-- Левая боковая панель - перемещена после основного контента -->
-        <aside class="sidebar left-sidebar">
-            <h3>Быстрые ссылки</h3>
-            <ul>
-                <li><a href="allcourses.html">Все курсы</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="#">Поддержка</a></li>
-            </ul>
-            
-            <h3>Категории</h3>
-            <ul>
-                <li><a href="#">Программирование</a></li>
-                <li><a href="#">Дизайн</a></li>
-                <li><a href="#">Маркетинг</a></li>
-                <li><a href="#">Бизнес</a></li>
-            </ul>
-        </aside>
-    </div>
+    <!-- Выпадающая боковая панель -->
+    <aside class="sidebar left-sidebar">
+        <button class="close-sidebar">✕</button>
+        <h3>Быстрые ссылки</h3>
+        <ul>
+            <li><a href="allcourses.html">Все курсы</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#">Поддержка</a></li>
+        </ul>
+        
+        <h3>Категории</h3>
+        <ul>
+            <li><a href="#">Программирование</a></li>
+            <li><a href="#">Дизайн</a></li>
+            <li><a href="#">Маркетинг</a></li>
+            <li><a href="#">Бизнес</a></li>
+        </ul>
+    </aside>
+
+    <!-- Подложка для закрытия панели -->
+    <div class="sidebar-overlay"></div>
 
     <!-- Подвал сайта -->
     <footer class="footer">
@@ -103,6 +107,27 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav').classList.toggle('active');
             this.classList.toggle('active');
+        });
+
+        // Управление боковой панелью
+        const sidebar = document.querySelector('.left-sidebar');
+        const sidebarBtn = document.querySelector('.sidebar-toggle-btn');
+        const closeBtn = document.querySelector('.close-sidebar');
+        const overlay = document.querySelector('.sidebar-overlay');
+
+        sidebarBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
         });
     </script>
 </body>
