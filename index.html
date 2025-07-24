@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="manifest" href="manifest.json">
+	<script src="app.js" defer></script>
+    <title>Онлайн-курсы - NIKSLearn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>NIKSLearn</h1>
+                <p>Ваш проводник в мире знаний</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#courses">Курсы</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="feedback.html" class="btn">Обратная связь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент с боковыми панелями -->
+    <div class="content-wrapper">
+        <!-- Левая боковая панель -->
+        <aside class="sidebar left-sidebar">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+                <li><a href="allcourses.html">Все курсы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#">Поддержка</a></li>
+            </ul>
+            
+            <h3>Категории</h3>
+            <ul>
+                <li><a href="#">Программирование</a></li>
+                <li><a href="#">Дизайн</a></li>
+                <li><a href="#">Маркетинг</a></li>
+                <li><a href="#">Бизнес</a></li>
+            </ul>
+        </aside>
+
+        <!-- Центральный контент -->
+        <main class="main">
+            <!-- Герой-секция -->
+            <section class="hero">
+                <div class="container">
+                    <h2>Начните обучение сегодня</h2>
+                    <p>Доступные курсы от лучших преподавателей</p>
+                    <a href="#courses" class="btn btn-large">Записаться сейчас</a>
+                </div>
+            </section>
+
+            <!-- Популярные курсы -->
+            <section id="courses" class="courses">
+                <div class="container">
+                    <h2>Популярные курсы</h2>
+                    <div class="course-grid">
+                        <!-- Курс 1 -->
+                        <div class="course-card">
+                            <h3>Веб-разработка</h3>
+                            <p>Полный курс по созданию современных веб-сайтов</p>
+                            <span class="price">Бесценно</span>
+                        </div>
+                        <!-- Курс 2 -->
+                        <div class="course-card">
+                            <h3>Data Science</h3>
+                            <p>Основы анализа данных и машинного обучения</p>
+                            <span class="price">Не изучено автором</span>
+                        </div>
+                        <!-- Курс 3 -->
+                        <div class="course-card">
+                            <h3>UX/UI Дизайн</h3>
+                            <p>Создание удобных и красивых интерфейсов</p>
+                            <span class="price">Дорого</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Правая боковая панель -->
+        <aside class="sidebar right-sidebar">
+            <h3>Новости платформы</h3>
+            <div class="news-item">
+                <h4>Новые курсы</h4>
+                <p>Сегодня вышел курс по верстке сайтов!</p>
+                <span class="news-date">10.07.2025</span>
+            </div>
+            
+            <div class="news-item">
+                <h4>Создание системы</h4>
+                <p>Пришла мысль о создании сайта в голову главного разработчика</p>
+                <span class="news-date">05.07.2025</span>
+            </div>
+            
+            <div class="promo-banner">
+                <h3>Скидка 100%</h3>
+                <p>Приведи друга и получи первый месяц курса в подарок</p>
+                <a href="#" class="btn">Узнать больше</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Efanov Nikita. Ваши данные не хранятся на сервере.</p>
+        </div>
+    </footer>
+</body>
+</html>
