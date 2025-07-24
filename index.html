@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="manifest" href="manifest.json">
-	<script src="app.js" defer></script>
+    <link rel="manifest" href="manifest.json">
+    <script src="app.js" defer></script>
     <title>Онлайн-курсы - NIKSLearn</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,6 +16,11 @@
                 <h1>NIKSLearn</h1>
                 <p>Ваш проводник в мире знаний</p>
             </div>
+            <button class="menu-toggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <ul>
                     <li><a href="#courses">Курсы</a></li>
@@ -84,28 +89,6 @@
                 </div>
             </section>
         </main>
-
-        <!-- Правая боковая панель -->
-        <aside class="sidebar right-sidebar">
-            <h3>Новости платформы</h3>
-            <div class="news-item">
-                <h4>Новые курсы</h4>
-                <p>Сегодня вышел курс по верстке сайтов!</p>
-                <span class="news-date">10.07.2025</span>
-            </div>
-            
-            <div class="news-item">
-                <h4>Создание системы</h4>
-                <p>Пришла мысль о создании сайта в голову главного разработчика</p>
-                <span class="news-date">05.07.2025</span>
-            </div>
-            
-            <div class="promo-banner">
-                <h3>Скидка 100%</h3>
-                <p>Приведи друга и получи первый месяц курса в подарок</p>
-                <a href="#" class="btn">Узнать больше</a>
-            </div>
-        </aside>
     </div>
 
     <!-- Подвал сайта -->
@@ -114,5 +97,13 @@
             <p>&copy; 2025 Efanov Nikita. Ваши данные не хранятся на сервере.</p>
         </div>
     </footer>
+
+    <script>
+        // Мобильное меню
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

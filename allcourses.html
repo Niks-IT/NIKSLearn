@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
-	<script src="app.js" defer></script>
-	<title>Все курсы - NIKSLearn</title>
+    <script src="app.js" defer></script>
+    <title>Все курсы - NIKSLearn</title>
     <link rel="stylesheet" href="allcourses.css">
 </head>
 <body>
@@ -16,6 +16,11 @@
                 <h1>NIKSLearn</h1>
                 <p>Ваш проводник в мире знаний</p>
             </div>
+            <button class="menu-toggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -132,5 +137,13 @@
             <p>&copy; 2025 Efanov Nikita. Ваши данные не хранятся на сервере.</p>
         </div>
     </footer>
+
+    <script>
+        // Мобильное меню
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
