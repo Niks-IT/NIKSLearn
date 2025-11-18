@@ -1,5 +1,5 @@
 # NIKSLearn
-**NIKSLearn - Online Learning Platform**
+**NIKSLearn - Online Learning Platform (PWA)**
 
 NIKSLearn is a modern, responsive online learning platform built with pure HTML, CSS, and JavaScript. The project features a clean and accessible user interface where visitors can browse a variety of educational courses.
 
